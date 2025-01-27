@@ -70,30 +70,30 @@
         Number {
             label = "Number";
             bindings = <
-  &kp LEFT   &kp DOWN      &kp UP_ARROW  &kp RIGHT      &kp KP_NUMLOCK  &kp LS(MINUS)     &kp N7        &kp N8        &kp N9        &kp PLUS
-  &sk LGUI   &sk LEFT_ALT  &sk LCTRL     &sk LSHFT      &sk RIGHT_ALT   &kp EQUAL         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-  &kp COMMA  &kp PERIOD    &kp TAB       &kp BACKSPACE  &kp ENTER       &kp LS(ASTERISK)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                           &none         &none          &trans          &kp N0            &kp SPACE     &kp KP_N0
+  &kp LEFT   &kp DOWN      &kp UP_ARROW  &kp RIGHT      &kp KP_NUMLOCK  &kp UNDERSCORE  &kp N7        &kp N8        &kp N9        &kp PLUS
+  &sk LGUI   &sk LEFT_ALT  &sk LCTRL     &sk LSHFT      &sk RIGHT_ALT   &kp EQUAL       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp COMMA  &kp PERIOD    &kp TAB       &kp BACKSPACE  &kp ENTER       &kp ASTERISK    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                           &none         &none          &trans          &kp N0          &kp SPACE     &kp KP_N0
             >;
         };
 
-        Icons {
-            label = "Icons";
+        Symbols {
+            label = "Symbols";
             bindings = <
-  &kp LS(N1)     &kp LS(N2)      &kp LS(N3)     &kp LS(N4)  &kp LS(N5)        &kp LS(N6)    &kp LS(N7)    &kp LS(N8)     &kp LS(N9)    &kp LS(N0)
-  &sk LGUI       &kp LEFT_ALT    &sk LCTRL      &sk LSHFT   &kp LS(NUMBER_6)  &kp LS(BSLH)  &kp LS(LBKT)  &kp LS(RBKT)   &kp LS(SEMI)  &kp LS(APOS)
-  &kp LS(COMMA)  &kp LS(PERIOD)  &kp BACKSLASH  &kp PIPE    &kp LS(N7)        &trans        &trans        &kp LS(COMMA)  &kp LS(DOT)   &kp LS(FSLH)
-                                 &trans         &trans      &trans            &kp SPACE     &trans        &trans
+  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE              &kp COLON        &kp SEMICOLON      &kp PLUS
+  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
+  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
+                                     &none          &trans      &none          &kp LC(BACKSPACE)  &mt LEFT_SHIFT ENTER   &kp ESC
             >;
         };
 
-        Lpad {
-            label = "Lpad";
+        Functions {
+            label = "Functions";
             bindings = <
-  &kp LEFT      &kp RIGHT  &kp N7  &kp N8   &kp N9   &kp LS(EQUAL)  &kp MINUS   &kp LS(N8)  &kp FSLH      &kp BSPC
-  &kp LEFT_ALT  &kp BSPC   &kp N4  &kp N5   &kp N6   &kp EQUAL      &kp LS(N9)  &kp LS(N0)  &trans        &kp ENTER
-  &trans        &kp RET    &kp N1  &kp N2   &kp N3   &trans         &trans      &trans      &kp LEFT_ALT  &kp TAB
-                           &kp N0  &kp DOT  &kp TAB  &trans         &trans      &trans
+  &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12        &kp F7      &kp F8     &kp F9  &caps_word
+  &sk LCMD    &sk LEFT_ALT       &sk LCTRL         &sk LSHFT      &kp C_BRIGHTNESS_DEC  &kp F11        &kp F4      &kp F5     &kp F6  &none
+  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &none
+                                 &trans            &none          &none                 &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL
             >;
         };
 
@@ -107,23 +107,13 @@
             >;
         };
 
-        Arrows {
-            label = "Arrows";
+        Ctrl {
+            label = "Ctrl";
             bindings = <
-  &trans  &trans    &kp UP    &trans     &trans  &trans     &trans         &kp UP    &trans     &trans
-  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans     &kp LEFT       &kp DOWN  &kp RIGHT  &trans
-  &trans  &trans    &trans    &trans     &trans  &trans     &trans         &trans    &trans     &trans
-                    &trans    &trans     &trans  &kp SPACE  &kp BACKSPACE  &kp DEL
-            >;
-        };
-
-        Ctrls {
-            label = "Ctrls";
-            bindings = <
-  &kp LC(J)            &kp LA(LC(W))  &kp LC(LSHFT)  &kp LC(Y)  &kp LG(TAB)   &trans  &trans     &trans  &trans  &trans
-  &mt LA(LC(A)) LC(A)  &kp LC(S)      &kp LG(D)      &kp LC(F)  &kp LG(L)     &trans  &kp LC(J)  &trans  &trans  &trans
-  &kp LC(Z)            &kp LC(X)      &kp LC(C)      &kp LC(V)  &kp LC(B)     &trans  &trans     &trans  &trans  &trans
-                                      &kp TAB        &trans     &kp LEFT_ALT  &trans  &trans     &trans
+  &kp ESCAPE  &kp C_AC_BACK  &kp C_AC_SEARCH  &kp C_AC_FORWARD  &kp INSERT     &kp PAGE_UP    &kp HOME       &kp UP    &kp END     &kp CAPS
+  &sk LCMD    &sk LEFT_ALT   &sk LCTRL        &sk LSHFT         &sk RIGHT_ALT  &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE
+  &kp LC(Z)   &kp LC(X)      &kp LC(C)        &kp LC(V)         &kp LCMD       &kp ENTER      &kp BACKSPACE  &kp TAB   &kp C_MENU  &kp PRINTSCREEN
+                             &kp LCTRL        &kp LSHFT         &kp LEFT_ALT   &trans         &none          &none
             >;
         };
     };
