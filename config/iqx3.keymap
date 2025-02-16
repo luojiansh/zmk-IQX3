@@ -77,60 +77,60 @@
         Base {
             label = "Base";
             bindings = <
-  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L                     &kp U         &kp Y    &kp SQT
-  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N                     &kp E         &kp I    &kp O
-  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M                     &kp COMMA     &kp DOT  &kp SLASH
-                &lt 6 ESC  &ltq 1 SPACE  &ltq 2 TAB  &ltq 7 BSPC  &Shift_Enter RSHFT ENTER  &lt 8 DELETE
+  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L            &kp U         &kp Y    &kp SQT
+  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N            &kp E         &kp I    &kp O
+  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M            &kp COMMA     &kp DOT  &kp SLASH
+                &lt 6 ESC  &ltq 1 SPACE  &ltq 2 TAB  &ltq 7 BSPC  &mt RSHFT ENTER  &lt 8 DELETE
             >;
         };
 
         Symbols {
             label = "Symbols";
             bindings = <
-  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE                 &kp COLON        &kp SEMICOLON      &kp PLUS
-  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS      &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
-  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                     &trans         &trans      &trans         &kp LC(BACKSPACE)  &Shift_Enter RSHFT ENTER  &kp ESC
+  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE              &kp COLON        &kp SEMICOLON      &kp PLUS
+  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
+  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
+                                     &trans         &trans      &trans         &kp LC(BACKSPACE)  &mt RSHFT ENTER        &kp ESC
             >;
         };
 
         Number {
             label = "Number";
             bindings = <
-  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp UNDERSCORE  &kp N7                    &kp N8        &kp N9        &kp PLUS
-  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL       &kp NUMBER_4              &kp N5        &kp NUMBER_6  &kp MINUS
-  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK    &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                                   &trans        &trans         &trans       &kp N0          &Shift_Enter RSHFT ENTER  &kp PERIOD
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp UNDERSCORE  &kp N7           &kp N8        &kp N9        &kp PLUS
+  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL       &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                                   &trans        &trans         &trans       &kp N0          &mt RSHFT ENTER  &kp PERIOD
             >;
         };
 
         Mac {
             label = "Mac";
             bindings = <
-  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L                      &kp U         &kp Y    &kp SQT
-  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N                      &kp E         &kp I    &kp O
-  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M                      &kp COMMA     &kp DOT  &kp SLASH
-                &lt 6 ESC  &ltq 4 SPACE  &ltq 5 TAB  &ltq 7 BSPC  &Shift_Enter RSHIFT ENTER  &lt 8 DELETE
+  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L             &kp U         &kp Y    &kp SQT
+  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N             &kp E         &kp I    &kp O
+  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M             &kp COMMA     &kp DOT  &kp SLASH
+                &lt 6 ESC  &ltq 4 SPACE  &ltq 5 TAB  &ltq 7 BSPC  &mt RSHIFT ENTER  &lt 8 DELETE
             >;
         };
 
         Mac-Sym {
             label = "Mac-Sym";
             bindings = <
-  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE                 &kp COLON        &kp SEMICOLON      &kp PLUS
-  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS      &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
-  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                     &trans         &trans      &trans         &kp LG(BACKSPACE)  &Shift_Enter RSHFT ENTER  &kp ESC
+  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE              &kp COLON        &kp SEMICOLON      &kp PLUS
+  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
+  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
+                                     &trans         &trans      &trans         &kp LG(BACKSPACE)  &mt RSHFT ENTER        &kp ESC
             >;
         };
 
         Mac-Num {
             label = "Mac-Num";
             bindings = <
-  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SPACE     &kp N7                    &kp N8        &kp N9        &kp PLUS
-  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL     &kp NUMBER_4              &kp N5        &kp NUMBER_6  &kp MINUS
-  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                                   &trans        &trans         &trans       &kp KP_N0     &Shift_Enter RSHFT ENTER  &kp PERIOD
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SPACE     &kp N7           &kp N8        &kp N9        &kp PLUS
+  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL     &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                                   &trans        &trans         &trans       &kp KP_N0     &mt RSHFT ENTER  &kp PERIOD
             >;
         };
 
