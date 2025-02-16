@@ -146,9 +146,9 @@
         Ble {
             label = "Ble";
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none
-  &none         &none           &none         &bt BT_CLR    &out OUT_TOG  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-  &bootloader   &bt BT_CLR_ALL  &none         &out OUT_USB  &out OUT_BLE  &none           &none           &none           &none            &bootloader
+  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none
+  &none           &none         &none         &bt BT_CLR    &out OUT_TOG  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+  &bt BT_CLR_ALL  &none         &none         &out OUT_USB  &out OUT_BLE  &none           &none           &none           &none            &bootloader
                                 &mkp LCLK     &mkp MCLK     &mkp RCLK     &trans          &trans          &trans
             >;
         };
