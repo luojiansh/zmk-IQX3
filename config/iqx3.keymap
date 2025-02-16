@@ -127,7 +127,7 @@
         Mac-Num {
             label = "Mac-Num";
             bindings = <
-  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SPACE     &kp N7           &kp N8        &kp N9        &kp PLUS
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp UNDER     &kp N7           &kp N8        &kp N9        &kp PLUS
   &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL     &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
   &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
                                    &trans        &trans         &trans       &kp KP_N0     &mt RSHFT ENTER  &kp PERIOD
