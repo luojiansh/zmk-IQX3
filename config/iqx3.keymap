@@ -139,7 +139,7 @@
             bindings = <
   &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12        &kp F7      &kp F8     &kp F9  &caps_word
   &sk LCMD    &sk LEFT_ALT       &sk LCTRL         &sk LSHFT      &kp C_BRIGHTNESS_DEC  &kp F11        &kp F4      &kp F5     &kp F6  &to 0
-  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &to 4
+  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &to 3
                                  &trans            &trans         &trans                &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL
             >;
         };
