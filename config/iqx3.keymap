@@ -31,8 +31,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             hold-trigger-key-positions = <34>;
+            quick-tap-ms = <180>;
         };
     };
 
@@ -79,47 +80,57 @@
   &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L                     &kp U         &kp Y    &kp SQT
   &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N                     &kp E         &kp I    &kp O
   &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M                     &kp COMMA     &kp DOT  &kp SLASH
-                &lt 5 ESC  &ltq 2 SPACE  &ltq 4 TAB  &ltq 6 BSPC  &Shift_Enter LSHFT ENTER  &lt 7 DELETE
-            >;
-        };
-
-        Mac {
-            label = "Mac";
-            bindings = <
-  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L                     &kp U         &kp Y    &kp SQT
-  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N                     &kp E         &kp I    &kp O
-  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M                     &kp COMMA     &kp DOT  &kp SLASH
-                &lt 5 ESC  &ltq 3 SPACE  &ltq 4 TAB  &ltq 6 BSPC  &Shift_Enter LSHFT ENTER  &lt 7 DELETE
+                &lt 6 ESC  &ltq 1 SPACE  &ltq 2 TAB  &ltq 7 BSPC  &Shift_Enter RSHFT ENTER  &lt 8 DELETE
             >;
         };
 
         Symbols {
             label = "Symbols";
             bindings = <
-  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE                      &kp COLON        &kp SEMICOLON      &kp PLUS
-  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS           &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
-  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                     &trans         &trans      &trans         &kp LC(BACKSPACE)  &Shift_Enter LEFT_SHIFT ENTER  &kp ESC
-            >;
-        };
-
-        Mac-Sym {
-            label = "Mac-Sym";
-            bindings = <
-  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE                      &kp COLON        &kp SEMICOLON      &kp PLUS
-  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS           &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
-  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                     &trans         &trans      &trans         &kp LG(BACKSPACE)  &Shift_Enter LEFT_SHIFT ENTER  &kp ESC
+  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE                 &kp COLON        &kp SEMICOLON      &kp PLUS
+  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS      &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
+  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
+                                     &trans         &trans      &trans         &kp LC(BACKSPACE)  &Shift_Enter RSHFT ENTER  &kp ESC
             >;
         };
 
         Number {
             label = "Number";
             bindings = <
-  &kp LEFT        &kp DOWN      &kp UP_ARROW  &kp RIGHT      &kp KP_NUMLOCK  &kp SPACE     &kp N7        &kp N8        &kp N9        &kp PLUS
-  &sk LGUI        &sk LEFT_ALT  &sk LCTRL     &sk LSHFT      &sk RIGHT_ALT   &kp EQUAL     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-  &kp UNDERSCORE  &kp COMMA     &kp TAB       &kp BACKSPACE  &kp ENTER       &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                                &trans        &trans         &trans          &kp PERIOD    &kp N0        &kp KP_N0
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp UNDERSCORE  &kp N7                    &kp N8        &kp N9        &kp PLUS
+  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL       &kp NUMBER_4              &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK    &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                                   &trans        &trans         &trans       &kp N0          &Shift_Enter RSHFT ENTER  &kp PERIOD
+            >;
+        };
+
+        Mac {
+            label = "Mac";
+            bindings = <
+  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L                      &kp U         &kp Y    &kp SQT
+  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N                      &kp E         &kp I    &kp O
+  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M                      &kp COMMA     &kp DOT  &kp SLASH
+                &lt 6 ESC  &ltq 4 SPACE  &ltq 5 TAB  &ltq 7 BSPC  &Shift_Enter RSHIFT ENTER  &lt 8 DELETE
+            >;
+        };
+
+        Mac-Sym {
+            label = "Mac-Sym";
+            bindings = <
+  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE                 &kp COLON        &kp SEMICOLON      &kp PLUS
+  &sk LGUI         &kp LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS      &kp RIGHT_BRACE  &kp LEFT_BRACKET   &kp MINUS
+  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
+                                     &trans         &trans      &trans         &kp LG(BACKSPACE)  &Shift_Enter RSHFT ENTER  &kp ESC
+            >;
+        };
+
+        Mac-Num {
+            label = "Mac-Num";
+            bindings = <
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SPACE     &kp N7                    &kp N8        &kp N9        &kp PLUS
+  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL     &kp NUMBER_4              &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                                   &trans        &trans         &trans       &kp KP_N0     &Shift_Enter RSHFT ENTER  &kp PERIOD
             >;
         };
 
@@ -128,7 +139,7 @@
             bindings = <
   &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12        &kp F7      &kp F8     &kp F9  &caps_word
   &sk LCMD    &sk LEFT_ALT       &sk LCTRL         &sk LSHFT      &kp C_BRIGHTNESS_DEC  &kp F11        &kp F4      &kp F5     &kp F6  &to 0
-  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &to 1
+  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &to 4
                                  &trans            &trans         &trans                &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL
             >;
         };
@@ -136,10 +147,10 @@
         Ctrl {
             label = "Ctrl";
             bindings = <
-  &kp ESCAPE  &kp C_AC_BACK  &kp C_AC_FIND  &kp C_AC_FORWARD  &kp INSERT     &kp PAGE_UP    &kp HOME       &kp UP    &kp END     &kp CAPS
-  &sk LCMD    &sk LEFT_ALT   &sk LCTRL      &sk LSHFT         &sk RIGHT_ALT  &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp DELETE
-  &kp LC(Z)   &kp LC(X)      &kp LC(C)      &kp LC(V)         &kp LCMD       &kp ENTER      &kp BACKSPACE  &kp TAB   &kp C_MENU  &kp PRINTSCREEN
-                             &kp LCTRL      &kp LSHFT         &kp LEFT_ALT   &trans         &trans         &trans
+  &kp ESCAPE  &kp C_AC_BACK  &kp C_AC_SEARCH  &kp C_AC_FORWARD  &kp INSERT     &kp PAGE_UP    &kp HOME       &kp UP    &kp END            &kp CAPS
+  &sk LCMD    &sk LEFT_ALT   &sk LCTRL        &sk LSHFT         &sk RIGHT_ALT  &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT          &kp DELETE
+  &kp LC(Z)   &kp LC(X)      &kp LC(C)        &kp LC(V)         &kp LCMD       &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_APPLICATION  &kp PRINTSCREEN
+                             &kp LCTRL        &kp LSHFT         &kp LEFT_ALT   &trans         &trans         &trans
             >;
         };
 
