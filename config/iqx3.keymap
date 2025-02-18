@@ -36,7 +36,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LOCK_MOUSE_LAYER";
             #binding-cells = <0>;
-            bindings = <&tog_off 8>, <&tog_on 8>;
+            bindings = <&tog_on 8>, <&tog_off 8>;
         };
 
         tog_on: tog_on {
