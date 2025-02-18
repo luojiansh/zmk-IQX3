@@ -32,6 +32,13 @@
             bindings = <&caps_word>, <&kp CAPS>;
         };
 
+        lock_mouse_layer: lock_mouse_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LOCK_MOUSE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&tog_off 8>, <&tog_on 8>;
+        };
+
         tog_on: tog_on {
             compatible = "zmk,behavior-toggle-layer";
             label = "TOG_ON";
@@ -42,6 +49,7 @@
             compatible = "zmk,behavior-toggle-layer";
             label = "TOG_OFF";
             #binding-cells = <1>;
+            toggle-mode = "off";
         };
     };
 
@@ -135,7 +143,7 @@
             bindings = <
   &none     &none     &none      &none      &none      &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mo 9
   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &sk RALT   &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-  &none     &none     &none      &none      &none      &none           &none           &none           &none            &tog 8
+  &none     &none     &none      &none      &none      &none           &none           &none           &none            &lock_mouse_layer
                       &mkp MCLK  &mkp LCLK  &mkp RCLK  &mkp LCLK       &mkp RCLK       &trans
             >;
         };
