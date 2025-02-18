@@ -25,49 +25,37 @@
             flavor = "tap-preferred";
         };
 
-        Shift_Enter: Shift_Enter {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_ENTER";
-            bindings = <&kp>, <&kp>;
+        caps_dance: caps_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_DANCE";
+            #binding-cells = <0>;
+            bindings = <&caps_word>, <&kp CAPS>;
+        };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <34>;
-            quick-tap-ms = <180>;
+        tog_on: tog_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOG_ON";
+            #binding-cells = <1>;
+        };
+
+        tog_off: tog_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOG_OFF";
+            #binding-cells = <1>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        ParaLeft {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <6 16>;
+        lock_mouse_layer {
+            bindings = <&tog_on 8>;
+            key-positions = <35 29>;
         };
 
-        ParaRight {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <16 26>;
-        };
-
-        BrakLeft {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <8 18>;
-        };
-
-        BrakRight {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <18 28>;
-        };
-
-        BraceLeft {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <7 17>;
-        };
-
-        BraceRight {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <17 27>;
+        control_layer {
+            bindings = <&mo 9>;
+            key-positions = <9 35>;
         };
     };
 
@@ -80,7 +68,17 @@
   &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L            &kp U         &kp Y    &kp SQT
   &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N            &kp E         &kp I    &kp O
   &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M            &kp COMMA     &kp DOT  &kp SLASH
-                &lt 6 ESC  &ltq 1 SPACE  &ltq 2 TAB  &ltq 7 BSPC  &mt RSHFT ENTER  &lt 8 DELETE
+                &lt 6 ESC  &ltq 2 SPACE  &ltq 4 TAB  &ltq 7 BSPC  &mt RSHFT ENTER  &lt 8 DELETE
+            >;
+        };
+
+        Mac {
+            label = "Mac";
+            bindings = <
+  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L             &kp U         &kp Y    &kp SQT
+  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N             &kp E         &kp I    &kp O
+  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M             &kp COMMA     &kp DOT  &kp SLASH
+                &lt 6 ESC  &ltq 3 SPACE  &ltq 5 TAB  &ltq 7 BSPC  &mt RSHIFT ENTER  &lt 8 DELETE
             >;
         };
 
@@ -94,26 +92,6 @@
             >;
         };
 
-        Number {
-            label = "Number";
-            bindings = <
-  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp UNDERSCORE  &kp N7           &kp N8        &kp N9        &kp PLUS
-  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL       &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
-  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                                   &trans        &trans         &trans       &kp N0          &mt RSHFT ENTER  &kp PERIOD
-            >;
-        };
-
-        Mac {
-            label = "Mac";
-            bindings = <
-  &kp Q  &kp W  &kp F      &kp P         &kp G       &kp J        &kp L             &kp U         &kp Y    &kp SQT
-  &kp A  &kp R  &kp S      &kp T         &kp D       &kp H        &kp N             &kp E         &kp I    &kp O
-  &kp Z  &kp X  &kp C      &kp V         &kp B       &kp K        &kp M             &kp COMMA     &kp DOT  &kp SLASH
-                &lt 6 ESC  &ltq 4 SPACE  &ltq 5 TAB  &ltq 7 BSPC  &mt RSHIFT ENTER  &lt 8 DELETE
-            >;
-        };
-
         Mac-Sym {
             label = "Mac-Sym";
             bindings = <
@@ -124,43 +102,63 @@
             >;
         };
 
+        Numbers {
+            label = "Numbers";
+            bindings = <
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SLASH     &kp N7           &kp N8        &kp N9        &kp PLUS
+  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &sk RALT     &kp EQUAL     &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp UNDERSCORE
+                                   &trans        &trans         &trans       &kp N0        &mt RSHFT ENTER  &kp PERIOD
+            >;
+        };
+
         Mac-Num {
             label = "Mac-Num";
             bindings = <
-  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp UNDER     &kp N7           &kp N8        &kp N9        &kp PLUS
-  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &kp CARET    &kp EQUAL     &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
-  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+  &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SLASH     &kp N7           &kp N8        &kp N9        &kp PLUS
+  &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &sk RALT     &kp EQUAL     &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
+  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp SPACE    &kp ASTERISK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp UNDERSCORE
                                    &trans        &trans         &trans       &kp KP_N0     &mt RSHFT ENTER  &kp PERIOD
             >;
         };
 
-        Functions {
-            label = "Functions";
+        Function {
+            label = "Function";
             bindings = <
-  &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12        &kp F7      &kp F8     &kp F9  &caps_word
+  &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12        &kp F7      &kp F8     &kp F9  &caps_dance
   &sk LCMD    &sk LEFT_ALT       &sk LCTRL         &sk LSHFT      &kp C_BRIGHTNESS_DEC  &kp F11        &kp F4      &kp F5     &kp F6  &to 0
-  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &to 3
+  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10        &kp F1      &kp F2     &kp F3  &to 1
                                  &trans            &trans         &trans                &kp RIGHT_ALT  &kp RSHIFT  &kp RCTRL
             >;
         };
 
-        Ctrl {
-            label = "Ctrl";
+        Navigation {
+            label = "Navigation";
             bindings = <
-  &kp ESCAPE  &kp C_AC_BACK  &kp C_AC_FIND  &kp C_AC_FORWARD  &kp INSERT     &kp PAGE_UP    &kp HOME       &kp UP    &kp END            &kp CAPS
+  &kp ESCAPE  &kp C_AC_BACK  &kp C_AC_FIND  &kp C_AC_FORWARD  &kp INSERT     &kp PAGE_UP    &kp HOME       &kp UP    &kp END            &caps_dance
   &sk LCMD    &sk LEFT_ALT   &sk LCTRL      &sk LSHFT         &sk RIGHT_ALT  &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT          &kp DELETE
   &kp LC(Z)   &kp LC(X)      &kp LC(C)      &kp LC(V)         &kp LCMD       &kp ENTER      &kp BACKSPACE  &kp TAB   &kp K_APPLICATION  &kp PRINTSCREEN
                              &kp LCTRL      &kp LSHFT         &kp LEFT_ALT   &trans         &trans         &trans
             >;
         };
 
-        Ble {
-            label = "Ble";
+        Mouse {
+            label = "Mouse";
             bindings = <
-  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none
-  &none           &none         &none         &bt BT_CLR    &out OUT_TOG  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-  &bt BT_CLR_ALL  &none         &none         &out OUT_USB  &out OUT_BLE  &none           &none           &none           &none            &bootloader
-                                &mkp LCLK     &mkp MCLK     &mkp RCLK     &trans          &trans          &trans
+  &none     &none     &none      &none      &none      &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none
+  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &sk RALT   &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+  &none     &none     &none      &none      &none      &none           &none           &none           &none            &tog_off 8
+                      &mkp MCLK  &mkp LCLK  &mkp RCLK  &mkp LCLK       &mkp RCLK       &trans
+            >;
+        };
+
+        Control {
+            label = "Control";
+            bindings = <
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   &none           &none   &none  &none
+  &sys_reset    &none         &none         &bt BT_CLR    &out OUT_TOG  &none   &bt BT_CLR_ALL  &none   &none  &none
+  &bootloader   &none         &none         &out OUT_USB  &out OUT_BLE  &none   &none           &none   &none  &none
+                              &trans        &trans        &trans        &trans  &trans          &trans
             >;
         };
     };
