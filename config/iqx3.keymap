@@ -89,7 +89,7 @@
   &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE              &kp COLON        &kp SEMICOLON      &kp PLUS
   &sk LGUI         &sk LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp MINUS
   &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                     &trans         &trans      &trans         &kp LC(BACKSPACE)  &mt RSHFT ENTER        &kp ESC
+                                     &trans         &trans      &trans         &kp LC(BACKSPACE)  &mt RSHFT ENTER        &kp SPACE
             >;
         };
 
@@ -99,7 +99,7 @@
   &kp EXCLAMATION  &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp TILDE          &kp GRAVE              &kp COLON        &kp SEMICOLON      &kp PLUS
   &sk LGUI         &sk LEFT_ALT      &sk LCTRL      &sk LSHFT   &kp CARET      &kp EQUAL          &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp MINUS
   &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp ASTERISK       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                     &trans         &trans      &trans         &kp LG(BACKSPACE)  &mt RSHFT ENTER        &kp ESC
+                                     &trans         &trans      &trans         &kp LG(BACKSPACE)  &mt RSHFT ENTER        &kp SPACE
             >;
         };
 
@@ -109,7 +109,7 @@
   &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SLASH     &kp N7        &kp N8        &kp N9        &kp PLUS
   &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &sk RALT     &kp EQUAL     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
   &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp ENTER    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp UNDERSCORE
-                                   &trans        &trans         &trans       &kp PERIOD    &kp NUMBER_0  &kp COMMA
+                                   &trans        &trans         &trans       &kp PERIOD    &kp NUMBER_0  &kp SPACE
             >;
         };
 
@@ -119,17 +119,17 @@
   &kp LEFT       &kp DOWN          &kp UP_ARROW  &kp RIGHT      &kp PERCENT  &kp SLASH     &kp N7           &kp N8        &kp N9        &kp PLUS
   &sk LGUI       &sk LEFT_ALT      &sk LCTRL     &sk LSHFT      &sk RALT     &kp EQUAL     &kp NUMBER_4     &kp N5        &kp NUMBER_6  &kp MINUS
   &kp LESS_THAN  &kp GREATER_THAN  &kp TAB       &kp BACKSPACE  &kp ENTER    &kp ASTERISK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp UNDERSCORE
-                                   &trans        &trans         &trans       &kp PERIOD    &kp KP_NUMBER_0  &kp PERIOD
+                                   &trans        &trans         &trans       &kp PERIOD    &kp KP_NUMBER_0  &kp SPACE
             >;
         };
 
         Function {
             label = "Function";
             bindings = <
-  &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12  &kp F7     &kp F8  &kp F9  &caps_dance
-  &sk LCMD    &sk LEFT_ALT       &sk LCTRL         &sk LSHFT      &kp C_BRIGHTNESS_DEC  &kp F11  &kp F4     &kp F5  &kp F6  &to 0
-  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10  &kp F1     &kp F2  &kp F3  &to 1
-                                 &trans            &trans         &trans                &kp B    &kp ENTER  &kp E
+  &kp C_STOP  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_BRIGHTNESS_INC  &kp F12  &kp F7     &kp F8     &kp F9  &caps_dance
+  &sk LCMD    &sk LEFT_ALT       &sk LCTRL         &sk LSHFT      &kp C_BRIGHTNESS_DEC  &kp F11  &kp F4     &kp F5     &kp F6  &to 0
+  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))     &kp LS(LC(V))  &kp C_VOLUME_UP       &kp F10  &kp F1     &kp F2     &kp F3  &to 1
+                                 &trans            &trans         &trans                &kp B    &kp ENTER  &kp SPACE
             >;
         };
 
